@@ -86,3 +86,8 @@ docker-compose up --build
 
 export JAVA_HOME="$(/usr/libexec/java_home -v 11)"
 export PATH=$PATH:$JAVA_HOME
+
+Run UI:
+http://localhost:80
+
+kompose convert -f docker-compose.yml

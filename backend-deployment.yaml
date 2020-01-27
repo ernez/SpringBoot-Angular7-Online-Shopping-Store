@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: backend
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: backend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: backend
+    spec:
+      containers:
+      - image: ernezdocker/springboot-angular7-online-shopping-store_backend:0.0.1-SNAPSHOT
+        name: backend
+        ports:
+        - containerPort: 8080
+        resources: {}
+      restartPolicy: Always

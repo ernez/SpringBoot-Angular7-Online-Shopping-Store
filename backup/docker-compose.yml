@@ -1,21 +1,17 @@
 version: '2'
 services:
-  postgres:
+  db:
     image: postgres:9.4.5
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: root
-    ports:
-      - "5432:5432"
   backend:
-    image: ernezdocker/springboot-angular7-online-shopping-store_backend:0.0.1-SNAPSHOT
     build: backend/.
     ports: 
       - "8080:8080"
     depends_on:
-      - postgres
+      - db
   frontend:
-    image: ernezdocker/springboot-angular7-online-shopping-store_frontend:0.0.1-SNAPSHOT
     build: frontend/.
     ports: 
       - "80:80"
