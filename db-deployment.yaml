@@ -7,10 +7,10 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      io.kompose.service: db
-  strategy:
-    type: Recreate
+            matchLabels:
+              io.kompose.service: db
+            strategy:
+              type: Recreate
   template:
     metadata:
       labels:

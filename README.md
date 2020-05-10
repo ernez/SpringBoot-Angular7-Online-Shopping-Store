@@ -83,6 +83,7 @@ ng build --prod
 ```bash
 docker-compose up --build
 ```
+docker-compose up --build -d
 
 export JAVA_HOME="$(/usr/libexec/java_home -v 11)"
 export PATH=$PATH:$JAVA_HOME

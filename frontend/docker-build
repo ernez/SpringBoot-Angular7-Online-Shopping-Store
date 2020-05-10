@@ -1,0 +1,2 @@
+docker build -t ernezdocker/springboot-angular7-online-shopping-store_frontend:0.0.1-SNAPSHOT .
+
